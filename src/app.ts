@@ -1,4 +1,6 @@
 import express, { Express } from "express";
+import adminRoutes from "./api/v1/routes/adminRoutes";
+import projectRoutes from "./api/v1/routes/projectRoutes";
 
 /**
  * Represents response structure for health check endpoint
@@ -31,5 +33,8 @@ app.get("/api/v1/health", (req, res) => {
 
     res.json(healthData);
 });
+
+app.use("/api/v1/", adminRoutes);
+app.use("/api/v1/", projectRoutes);
 
 export default app;
