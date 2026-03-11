@@ -9,7 +9,7 @@ const projectRouter = express.Router();
 projectRouter.post(
     "/projects",
     authenticate,
-    isAuthorized({ hasRole: ["admin", "lead"] }),
+    isAuthorized({ hasRole: ["admin", "lead"], allowSameUser: true }),
     createProject
 );
 

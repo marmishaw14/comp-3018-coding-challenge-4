@@ -34,7 +34,7 @@ app.get("/api/v1/health", (req, res) => {
     res.json(healthData);
 });
 
-app.use("/api/v1/admin", adminRoutes);
-app.use("/api/v1/projects", projectRoutes);
+app.use("/api/v1/", adminRoutes);
+app.use("/api/v1/", projectRoutes);
 
 export default app;

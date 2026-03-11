@@ -17,5 +17,7 @@ export const createProjectService = (newProject: Project) => {
         createdAt: new Date().toISOString(),
     };
 
+    projects.push(newProjectData);
+    
     return newProjectData;
 }
